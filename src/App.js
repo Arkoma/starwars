@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { NavLink } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -25,25 +26,21 @@ class App extends Component {
   }
   render() {
     console.log('starwarsChars', this.state.starwarsChars);
+    const charName = this.state.starwarsChars.name;
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <div className="card-container">
+        <ul>
+    
         {this.state.starwarsChars.map((character, key) => {
           return (
-            <div key={key} className="cc">
-              <h2 className="cc__name">{character.name}</h2>
-              <div className="cc__birth-year"><b>birth year: </b>{character.birth_year}</div>
-              <div className="cc__eye-color"><b>eye color: </b>{character.eye_color}</div>
-              <div className="cc__gender"><b>gender: </b>{character.gender}</div>
-              <div className="cc__hair-color"><b>hair color: </b>{character.hair_color}</div>
-              <div className="cc__mass"><b>mass: </b>{character.mass}</div>
-              <div className="cc__skin-color"><b>skin color: </b>{character.skin_color}</div>
-              <a href={character.homeworld}>{character.name}'s homeworld</a>
-            </div>
+            <li key={key} className="cc">
+              <NavLink to="/">{character.name}</NavLink>
+              
+            </li>
           )
         })}
-        </div>
+        </ul>
       </div>
     );
   }
