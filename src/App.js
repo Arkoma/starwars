@@ -26,17 +26,16 @@ class App extends Component {
   }
   render() {
     console.log('starwarsChars', this.state.starwarsChars);
-    const charName = this.state.starwarsChars.name;
+
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
         <ul>
-    
+
         {this.state.starwarsChars.map((character, key) => {
           return (
             <li key={key} className="cc">
-              <NavLink to="/">{character.name}</NavLink>
-              
+              <NavLink to={`/${character.name}`}>{character.name}</NavLink>
             </li>
           )
         })}
