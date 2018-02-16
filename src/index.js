@@ -6,7 +6,7 @@ import App from './App';
 import CharCard from './CharCard';
 import { BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom';
 
-
+console.log('index this: ', this)
 ReactDOM.render(
     <Router>
         <div>
