@@ -19,10 +19,14 @@ export default class CharCard extends React.Component {
           throw new Error(err);
         });
     }
-    Render() {
+    render() {
+        console.log('this state: ', this.state);
         return (
-            <div>
-                
+            <div className="container">
+                <div>{this.props.match.params.name}</div>
+                <div>{this.state.birth_year}</div>
+                <div>{this.state.characters.eye_color}</div>
+                <Link to="/"> Return Home </Link>
             </div>
         )
     }
