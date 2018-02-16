@@ -140,13 +140,23 @@ body {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
   width: 100%;
+  margin-bottom: 35px;
+}
+.App li {
+  margin-bottom: 35px;
 }
 .card-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   width: 100%;
   margin: 25px;
   justify-content: center;
+  align-items: center;
+}
+.card-container h2 {
+  align-self: center;
+  font-weight: 500;
+  font-size: 2rem;
 }
 .card-container .cc {
   display: flex;
@@ -171,8 +181,12 @@ h1 {
   font-weight: 700;
   font-size: 3rem;
 }
-h2 {
-  align-self: center;
+a {
+  color: lightcyan;
+  font-size: 1.5rem;
   font-weight: 500;
-  font-size: 2rem;
+  padding: 8px;
+  margin: 30px;
+  background: darkgray;
+  border-radius: 3px;
 }

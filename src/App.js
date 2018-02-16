@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <ul>
+        <ul className="menu-items">
 
         {this.state.starwarsChars.map((character, key) => {
           return (

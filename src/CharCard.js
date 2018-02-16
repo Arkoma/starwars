@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 export default class CharCard extends React.Component {
@@ -40,7 +40,7 @@ export default class CharCard extends React.Component {
                     <div>Skin Color: {this.findCharCard('skin_color')}</div>
                 </div>
                 <blockquote>
-                    <Link to="/"> Return Home </Link>
+                    <NavLink to="/" style={[ { color: 'red' } ]}> Return Home </NavLink>
                 </blockquote>
             </div>
         )
